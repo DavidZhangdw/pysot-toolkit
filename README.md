@@ -141,6 +141,33 @@ python bin/eval.py \
 -------------------------------------------
 ```
 
+### 4. Draw rectangular boxes
+
+```
+cd /path/to/pysot-toolkit
+python bin/draw_rect.py \                     
+	--dataset_dir /path/to/dataset/root \		# dataset path
+	--dataset VOT2018 \				# dataset name(VOT2018, VOT2016, OTB100, GOT10k)
+	--tracker_result_dir /path/to/tracker/dir \	# tracker dir
+    	--format pdf \                                  # save fomat (pdf,png,jpg)
+	--trackers SiamRPN++ C-COT DaSiamRPN ECO \      # tracker names 
+    	--save_dir \                                    # save dir
+```
+
+### 5. Draw a bounding box for a video sequence
+
+```
+cd /path/to/pysot-toolkit
+python bin/draw_rect.py \    
+    	-- video basketball \             	        # videoname
+	--dataset_dir /path/to/dataset/root \		# dataset path
+	--dataset VOT2018 \				# dataset name(VOT2018, VOT2016, OTB100, GOT10k)
+	--tracker_result_dir /path/to/tracker/dir \	# tracker dir
+    	--format pdf \                                  # save fomat (pdf,png,jpg)
+	--trackers SiamRPN++ C-COT DaSiamRPN ECO \      # tracker names 
+    	--save_dir \                                    # save dir
+```
+
 ## Get Tracking Results of Your Own Tracker
 
 Add pysot-toolkit to your PYTHONPATH
